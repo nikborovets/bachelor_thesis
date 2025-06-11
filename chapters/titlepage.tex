@@ -1,0 +1,62 @@
+% Настройки титульного листа
+\title{Моделирование трансформации дисперсных характеристик трёхфазного потока в процессе движения по каналу сложной формы}
+\author{Тух Никита Михайлович}
+
+\makeatletter
+\renewcommand{\maketitle}{
+	\begin{titlepage}
+		\renewcommand{\baselinestretch}{1}
+		\begin{small}
+			\begin{center}
+				Федеральное государственное автономное образовательное учреждение\\
+				высшего образования «Московский физико-технический институт\\
+				(национальный исследовательский университет)»\\[.5\baselineskip]
+				Физтех-школа аэрокосмических технологий\\[.5\baselineskip]
+				Кафедра компьютерного моделирования
+			\end{center}
+			
+			~\
+			
+			\textbf{Направление подготовки:} 03.03.01 Прикладные математика и физика (бакалавриат)
+			
+			\textbf{Направленность (профиль) подготовки:} Аэродинамика и теплообмен летательных аппаратов
+			
+			\textbf{Форма обучения:} очная
+		\end{small}
+		
+		\vfill
+		
+		\begin{center}
+			ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА\\[.5\baselineskip]
+			\textbf{«\@title»}\\[.5\baselineskip]
+			(бакалаврская работа)
+		\end{center}
+		
+		\vfill
+		
+		\begin{flushright}
+			\begin{minipage}{.5\linewidth}
+				\textbf{Студент:}\\
+				\@author\\
+				\(\underset{\emph{(подпись студента)}}{\uline{\hspace*{\linewidth-\baselineskip}}}\)
+				
+				~\
+				
+				\textbf{Научный руководитель:}\\
+				Горячев Алексей Владимирович,\\
+				к-т техн. наук\\
+				\(\underset{\emph{(подпись научного руководителя)}}{\uline{\hspace*{\linewidth-\baselineskip}}}\)
+			\end{minipage}
+		\end{flushright}
+		
+		\vfill
+		
+		\begin{center}
+			Жуковский
+			
+			2025
+		\end{center}
+	\end{titlepage}
+	\stepcounter{page}
+}
+\makeatother 

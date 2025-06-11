@@ -1,0 +1,31 @@
+% Настройки оглавления в российском стиле (tocloft)
+\usepackage{tocloft}
+
+% Заголовок оглавления
+\renewcommand{\contentsname}{\centering СОДЕРЖАНИЕ}
+
+% Отступы для разных уровней
+\setlength{\cftchapindent}{0pt}      % Главы без отступа
+\setlength{\cftsecindent}{0pt}     % Разделы с отступом 0pt (был 1.5em)  
+\setlength{\cftsubsecindent}{0pt}    % Подразделы с отступом 0pt (был 3em)
+
+% Ширина номеров
+\setlength{\cftchapnumwidth}{2em}    % Ширина для номеров глав
+\setlength{\cftsecnumwidth}{3em}   % Ширина для номеров разделов
+\setlength{\cftsubsecnumwidth}{4em}  % Ширина для номеров подразделов
+
+% Отточия (точки между названием и номером страницы)
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}    % Отточия для глав
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}     % Отточия для разделов
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}  % Отточия для подразделов
+
+% Шрифты (убираем жирность с номеров глав)
+\renewcommand{\cftchapfont}{\normalfont}      % Обычный шрифт для названий глав
+\renewcommand{\cftchappagefont}{\normalfont}  % Обычный шрифт для номеров страниц глав
+\renewcommand{\cftsecfont}{\normalfont}       % Обычный шрифт для разделов
+\renewcommand{\cftsubsecfont}{\normalfont}    % Обычный шрифт для подразделов
+
+% Интервалы между строками оглавления
+\setlength{\cftbeforechapskip}{0pt}    % Без дополнительных отступов между главами
+\setlength{\cftbeforesecskip}{0pt}     % Без дополнительных отступов между разделами
+\setlength{\cftbeforesubsecskip}{0pt}  % Без дополнительных отступов между подразделами 

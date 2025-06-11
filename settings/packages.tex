@@ -1,0 +1,20 @@
+% Основные пакеты
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{subcaption}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{float}                                  
+\usepackage{caption}    
+\usepackage{amsmath, amssymb, enumitem, calc, indentfirst}
+\usepackage[normalem]{ulem}
+\usepackage{fancyhdr}                               % Для настройки нумерации страниц согласно ГОСТ
+\usepackage[hidelinks]{hyperref} % Убираем рамки вокруг ссылок
+
+% Настройка нумерации страниц согласно п.2.5 ГОСТ
+% Арабскими цифрами, сквозная нумерация, номер в центре нижней части листа
+\pagestyle{fancy}
+\fancyhf{}                                          % Очищаем все колонтитулы
+\fancyfoot[C]{\thepage}                            % Номер страницы по центру внизу
+\renewcommand{\headrulewidth}{0pt}                 % Убираем линию сверху
+\renewcommand{\footrulewidth}{0pt}                 % Убираем линию снизу 

@@ -1,0 +1,26 @@
+\documentclass[14pt]{extreport}
+
+% === ПОДКЛЮЧЕНИЕ МОДУЛЬНЫХ НАСТРОЕК ===
+\input{settings/geometry}     % Настройки геометрии страницы
+\input{settings/fonts}        % Настройки шрифтов и кодировок  
+\input{settings/packages}     % Основные пакеты
+\input{settings/headings}     % Настройки заголовков
+\input{settings/toc}          % Настройки оглавления
+
+\begin{document}
+	% === ТИТУЛЬНЫЙ ЛИСТ ===
+	\thispagestyle{empty}     % Убираем номер страницы с титульного листа
+	\input{chapters/titlepage}
+	\maketitle
+
+	% === СОДЕРЖАНИЕ ДИПЛОМА ===
+	\input{chapters/abstract}
+	\input{chapters/contents}
+	\input{chapters/introduction}
+	\input{chapters/chapter1}
+	\input{chapters/chapter2}
+	\input{chapters/chapter3}
+	\input{chapters/chapter4}
+	\input{chapters/conclusion}
+	\input{chapters/bibliography}
+\end{document} 
