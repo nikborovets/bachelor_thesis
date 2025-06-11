@@ -1,70 +1,7 @@
-\chapter{Многофазная модель процесса}
+\chapter{Глава n}
 
-\section{Математическая модель движения несущей фазы}
+	\section{Секция n}
 
-Для задания движения несущей фазы, то есть воздуха внутри двигателя, используются уравнения Навье-Стокса. Уравнение неразрывности для газа записывается в форме [7]: 
-\begin{equation}
-	\frac{\partial \rho}{\partial t}+\nabla(\rho \mathbf{V}_r)=0,
-\end{equation}
-где $\mathbf{V}_r$ --- относительная скорость газа во вращающейся системе координат. Уравнение импульса запишется в виде [7]:
-\begin{equation}
-	\frac{\partial \rho \mathbf{V}_r}{\partial t}+\nabla(\rho \mathbf{V}_r \mathbf{V}_r)= \nabla \sigma^{ij}_r+\rho \mathbf{g}+\mathbf{F}_\text{ext},
-\end{equation}
-где $\sigma^{ij}_r$ --- тензор напряжений, определяемый соотношением [7]:
-\begin{equation}
-	\sigma^{ij}_r=-\delta^{ij} p_a+\mu_a\left[\delta^{jk} \nabla_k v^i+\delta^{ik} \nabla_k v^j-\frac{2}{3}\delta^{ij} \nabla_k v^k\right] = -\delta^{ij} p_a+\tau^{ij},
-\end{equation}
-где $\tau^{ij}$ --- тензор касательных напряжений [7]:
-\begin{equation}
-	\tau^{ij}=\mu_a\left[\delta^{jk} \nabla_k v^i+\delta^{ik} \nabla_k v^j-\frac{2}{3}\delta^{ij} \nabla_k v^k\right],
-\end{equation}
-$p_a$ --- статическое давление воздуха, $\mu_a$ --- динамическая вязкость воздуха, определяемая по эмпирическому закону Сазерленда [7]:
-\begin{equation}
-	\frac{\mu_a}{\mu_\infty}=\left(\frac{T}{T_\infty}\right)^{\frac{3}{2}}\left(\frac{T_\infty+110}{T+110}\right),
-\end{equation}
-где $T$ --- статическая температура воздуха, $T_\infty = 288\,\text{К}$ и $\mu_\infty = 17{,}9 \cdot 10^{-6}\,\text{Па} \cdot \text{с}$. Вектор силы $\mathbf{F}_\text{ext}$ в уравнении (2.2) состоит из Кориолисовой и центробежной сил [7]:
-\begin{equation}
-	\mathbf{F}_\text{ext} = \mathbf{F}_\text{co}+\mathbf{F}_\text{ce}=-2 \rho(\vec{\Omega} \times \vec{V_r})-\rho \vec{\Omega} \times (\vec{\Omega} \times \vec{r}),
-\end{equation}
-где $\Omega$ --- угловая скорость вращения, а $r$ --- расстояние от оси вращения. 
-
-\section{Математическая модель движения частиц в потоке}
-
-Движение капель и кристаллов льда описывается уравнениями неразрывности и импульса в следующей форме [1]:
-\begin{equation}
-	\frac{\partial \alpha}{\partial t}+\nabla(\alpha \mathbf{V}_d)=0
-\end{equation}
-\begin{equation}
-	\frac{\partial \alpha \mathbf{V}_d}{\partial t}+\nabla[\alpha \mathbf{V}_d \times \mathbf{V}_d]= \frac{C_d Re_d}{24K} (\mathbf{V}_a - \mathbf{V}_d)+\alpha\left(1-\frac{\rho_a}{\rho_d}\right)\frac{1}{Fr^2} + \mathbf{F}_{\text{ext}},
-\end{equation}
-где $\alpha$ --- концентрация частиц, где $\mathbf{V}_d$ --- вектор скорости частицы, $Re_d$ --- число Рейнольдса частицы, $K$ — инерционный параметр, $C_d$ --- коэффициент сопротивления частицы в потоке, $\mathbf{V}_a$ --- вектор скорости воздуха, $\mathbf{F}_{\text{ext}}$ --- вектор внешней силы. Число Рейнольдса рассчитывается следующим образом [4]:
-\begin{equation}
-	{Re_d} = \frac{\rho_a d \left| \mathbf{V}_a - \mathbf{V}_d \right|}{\mu_a},
-\end{equation}
-где $\rho_a$ --- плотность воздуха, $d$ --- диаметр частицы. Для инерционного параметра справедлива формула [6]:
-\begin{equation}
-	{K} = \frac{\rho_d d^2 V_{a,\infty}}{18 L_\infty \mu_a},
-\end{equation}
-где $\rho_d$ --- плотность частицы, $V_{a,\infty}$ --- характерная скорость воздуха, $L_\infty$ --- характерный размер задачи. В зависимости от числа Рейнольдса у частиц будет разный коэффициент сопротивления:
-\begin{equation}
-	C_d = 
-	\begin{cases}
-		\frac{24} {Re_d} (1 + 0.166 Re_d^{0.33}), & \text{если } Re_d < 350 \\
-		0.178 Re_d^{0.217},  & \text{если } Re_d \geq 350
-	\end{cases}
-\end{equation}
-Число Фруда, входящее в уравнение (2.8) рассчитывается следующим образом [7]:
-\begin{equation}
-	Fr = \frac{V_{a,\infty}}{\sqrt{L_\infty g_\infty}},
-\end{equation}
-
-При рассмотрении движения частиц в упрощенном случае, при подходе Лагранжа, в котором в отличие от Эйлерова подхода, все уравнения записываются для каждой частицы по отдельности, получим упрощенное уравнение импульса [1]: 
-\begin{equation}
-	\frac{d \mathbf{V}_d}{d t} = \frac{C_d Re_d}{24K} (\mathbf{V}_a - \mathbf{V}_d) + \mathbf{F}_{\text{ext}}
-\end{equation}
-В дальнейшем будет использоваться именно это уравнение для моделирования движения кристаллов и капель в потоке.
 
 % Подключение модульных частей главы 2
-\input{chapters/chapter2_part2}
-\input{chapters/chapter2_part3}
-\input{chapters/chapter2_part4}
+% \input{chapters/chapter2_partn}
