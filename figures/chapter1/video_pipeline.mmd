@@ -11,7 +11,7 @@ flowchart LR
     %% Сбор метрик
     subgraph METRICS["Сбор метрик"]
       direction TB
-      B -.-> M1[Метрики ML-конвейера:<br/>• timestamp_sei<br/>• time_delta<br/>• FPS]
+      B -.-> M1[Метрики ML-конвейера:<br/>• vidcap_delay<br/>• vidcap_fps<br/>• vidcap_fps_avg]
       D -.-> M2[Метрики бэкенда:<br/>• ml_to_backend_kafka_delay<br/>• db_insert_delay]
       E -.-> M3[Метрики WS-клиента:<br/>• common_event_delay<br/>• heartbeat_*<br/>• event_counter<br/>• seq_events_health]
     end
