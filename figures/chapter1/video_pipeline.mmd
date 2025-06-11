@@ -1,0 +1,37 @@
+flowchart LR
+    %% Pipeline обработки
+    subgraph PIPELINE["Pipeline обработки"]
+      direction LR
+      A[Камера] --> B[ML-конвейер]
+      B --> C[Kafka]
+      C --> D[Бэкенд]
+      D --> E[WebSocket-клиент]
+    end
+
+    %% Сбор метрик
+    subgraph METRICS["Сбор метрик"]
+      direction TB
+      B -.-> M1[Метрики ML-конвейера:<br/>• timestamp_sei<br/>• time_delta<br/>• FPS]
+      D -.-> M2[Метрики бэкенда:<br/>• ml_to_backend_kafka_delay<br/>• db_insert_delay]
+      E -.-> M3[Метрики WS-клиента:<br/>• common_event_delay<br/>• heartbeat_*<br/>• event_counter<br/>• seq_events_health]
+    end
+
+    %% Мониторинг и анализ
+    subgraph SYSTEM["Мониторинг и анализ"]
+      direction TB
+      P[Prometheus] --> S[Система предиктивного<br/>анализа отказов]
+    end
+
+    %% Связи метрик с Prometheus
+    M1 --> P
+    M2 --> P
+    M3 --> P
+
+    %% Стили
+    classDef pipeline fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef metrics  fill:#fff3e0,stroke:#e65100,stroke-width:1px
+    classDef system   fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+
+    class A,B,C,D,E pipeline
+    class M1,M2,M3 metrics
+    class P,S system
