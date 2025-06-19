@@ -19,7 +19,7 @@
 		\hline
 		\textbf{Ранг} & \textbf{Конфигурация модели} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE, \%} \\
 		\hline
-		1 & trend\_model\_type=local, depth=10, l2\_leaf\_reg=20, learning\_rate=0.03, iterations=500, rsm=0.8, use\_cyclic\_features=True, ema\_alpha=0.2 & 36.00 & 41.09 & 8.90 \\
+		1 & trend\_model\_type=local, depth=10, l2\_leaf\_reg=20, learning\_rate=0.03, iterations=500, rsm=0.8, use\_cyclic\_features=True, ema\_alpha=0.2 & \textbf{36.00} & \textbf{41.09} & \textbf{8.90} \\
 		\hline
 		2 & trend\_model\_type=global, depth=15, l2\_leaf\_reg=40, learning\_rate=0.015, iterations=500, rsm=0.75, use\_cyclic\_features=False, ema\_alpha=0.7 & 39.92 & 46.76 & 9.61 \\
 		\hline
@@ -79,7 +79,7 @@
 		\hline
 		\textbf{Ранг} & \textbf{Конфигурация модели} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE, \%} \\
 		\hline
-		1 & LSTM(64) → Dense(8, ReLU) → Dense(1, linear), Adam lr=0.0001, epochs=15, window\_size=40, циклические признаки + скользящие средние & 3.66 & 4.54 & 0.89 \\
+		1 & LSTM(64) → Dense(8, ReLU) → Dense(1, linear), Adam lr=0.0001, epochs=15, window\_size=40, циклические признаки + скользящие средние & \textbf{3.66} & \textbf{4.54} & \textbf{0.89} \\
 		\hline
 		2 & LSTM(64) → Dense(8, ReLU) → Dense(1, linear), Adam lr=0.0001, epochs=10, window\_size=40, циклические признаки + скользящие средние & 4.94 & 6.02 & 1.21 \\
 		\hline
@@ -123,7 +123,7 @@
 		\hline
 		\textbf{Ранг} & \textbf{Конфигурация модели} & \textbf{MAE} & \textbf{RMSE} & \textbf{MAPE, \%} \\
 		\hline
-		1 & SARIMA(1,1,0)(1,1,1,24) & 44.07 & 51.37 & 11.06 \\
+		1 & SARIMA(1,1,0)(1,1,1,24) & \textbf{44.07} & \textbf{51.37} & \textbf{11.06} \\
 		\hline
 		2 & SARIMA(1,1,0)(2,1,0,24) & 103.76 & 121.92 & 25.50 \\
 		\hline
@@ -158,7 +158,7 @@
 		\hline
 		\textbf{CatBoost} (Ранг 1) & 36.00 & 41.09 & 8.90 \\
 		\hline
-		\textbf{LSTM} (Ранг 1, 15 эпох) & 3.66 & 4.54 & 0.89 \\
+		\textbf{LSTM} (Ранг 1, 15 эпох) & \textbf{3.66} & \textbf{4.54} & \textbf{0.89} \\
 		\hline
 		\textbf{SARIMA} (Ранг 1) & 44.07 & 51.37 & 11.06 \\
 		\hline
