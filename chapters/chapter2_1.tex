@@ -4,7 +4,9 @@
 
 \subsection{Описание набора метрик}
 
-\hspace*{1.25cm}Система мониторинга Prometheus [2] собирает широкий спектр метрик, характеризующих работу различных подсистем видеоконвейера, включая метрики ML-конвейера ($vidcap\_delay$, $vidcap\_fps$), бэкенда ($ml\_to\_backend\_kafka\_delay$, $db\_insert\_delay$), и WebSocket-клиентов ($heartbeat\_*$, $event\_counter$, $seq\_events\_health$).
+\hspace*{1.25cm}Система мониторинга Prometheus [2] собирает широкий спектр метрик, характеризующих работу различных подсистем видеоконвейера, включая метрики ML-конвейера ($vidcap\_delay$, $vidcap\_fps$), бэкенда \\
+($ml\_to\_backend\_kafka\_delay$, $db\_insert\_delay$), и WebSocket-клиентов \\
+($heartbeat\_*$, $event\_counter$, $seq\_events\_health$).
 
 \hspace*{1.25cm}Для построения модели прогнозирования отобраны следующие ключевые метрики, наиболее релевантные для задачи предсказания end-to-end-задержки:
 
