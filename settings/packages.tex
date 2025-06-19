@@ -4,13 +4,17 @@
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage{graphicx}
-\usepackage{float}                                  
-\usepackage{caption}    
-\usepackage{amsmath, amssymb, enumitem, calc, indentfirst}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{amsmath, amssymb, enumitem, calc, indentfirst, amsthm}
 \usepackage[normalem]{ulem}
 \usepackage{fancyhdr}                               % Для настройки нумерации страниц согласно ГОСТ
 \usepackage[hidelinks]{hyperref} % Убираем рамки вокруг ссылок
 \usepackage{pdflscape} % Для альбомной ориентации страниц в PDF
+\usepackage{etoolbox}
+
+\captionsetup[figure]{labelsep=endash,justification=centering,singlelinecheck=false,font=normalfont,name=Рисунок}
+\captionsetup[table]{labelsep=endash,justification=raggedright,singlelinecheck=false,font=normalfont,name=Таблица}
 
 % Настройка нумерации страниц согласно п.2.5 ГОСТ
 % Арабскими цифрами, сквозная нумерация, номер в центре нижней части листа
